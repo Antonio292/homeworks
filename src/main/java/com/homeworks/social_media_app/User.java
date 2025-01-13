@@ -15,22 +15,26 @@ public class User {
         this.email = email;
     }
 
-    public void showInfo() {
-        System.out.println("Id пользователя: " + id + ",\n" +
+    public String showInfo() {
+        String info = "Id пользователя: " + id + ",\n" +
                            "Имя пользователя: " + name + ",\n" +
-                           "Электронная почта пользователя: " + email);
+                           "Электронная почта пользователя: " + email;
+        System.out.println(info);
+        return info;
     }
 
     public void addFriend(User user) {
         if (user != null) {
             friendList.add(user);
         }
+        System.out.println("User was set");
     }
 
     public void removeFriend(User user) {
         if (user != null) {
             friendList.remove(user);
         }
+        System.out.println("User was removed");
     }
 
     public Post createPost(String content) {
@@ -46,6 +50,12 @@ public class User {
             for (Post post: postsList) {
                 System.out.println(post.getContent());
             }
+        }
+    }
+
+    public void showFriendList() {
+        for (User user: friendList) {
+            user.showInfo();
         }
     }
 }

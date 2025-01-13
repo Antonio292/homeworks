@@ -18,10 +18,12 @@ public class PremiumUser extends User{
     }
 
     @Override
-    public void showInfo() {
-        System.out.println("Id премиум пользователя: " + id + ",\n" +
+    public String showInfo() {
+        String info = "Id премиум пользователя: " + id + ",\n" +
                 "Имя премиум пользователя: " + name + ",\n" +
                 "Электронная почта премиум пользователя: " + email + "\n" +
-                "До окончания подписки осталось " + subscriptionEndDate + " дней.");
+                "До окончания подписки осталось " + subscriptionEndDate + " дней.";
+        System.out.println(info);
+        return info;
     }
 }

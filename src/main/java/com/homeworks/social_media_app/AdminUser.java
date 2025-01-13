@@ -19,17 +19,19 @@ public class AdminUser extends User{
     }
 
     @Override
-    public void showInfo() {
-        System.out.println("Id Администратора: " + id + ",\n" +
+    public String showInfo() {
+        String info = "Id Администратора: " + id + ",\n" +
                 "Имя Администратора: " + name + ",\n" +
-                "Электронная почта Администратора: " + email);
+                "Электронная почта Администратора: " + email;
+        System.out.println(info);
+        return info;
     }
 
     public void showBlockList() {
         if (!blockList.isEmpty()) {
             System.out.println(blockList.size());
             for (User user: blockList) {
-                System.out.println(user);
+                System.out.println(user.showInfo());
             }
         }
     }
