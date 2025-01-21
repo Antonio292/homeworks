@@ -1,8 +1,10 @@
 package com.homeworks.homework31;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Slf4j
 public class PostOffice {
     private List<MailItem> mailItems = new ArrayList<>();
 
@@ -13,9 +15,11 @@ public class PostOffice {
     public void addMailItem(MailItem Item){
         if (Item != null) {
             mailItems.add(Item);
+            log.info("added new Mail item");
         }
         else {
             System.out.println("Попытка добавить несуществующий элемент");
+            log.warn("attempt to added null");
         }
     }
 
@@ -32,10 +36,15 @@ public class PostOffice {
     }
 
     public void printAllDetails() {
-        new ArrayList<>(mailItems);
-        for (MailItem Item: mailItems) {
-            Item.printDetails();
-            System.out.println("-------");
+        if (!mailItems.isEmpty()) {
+            new ArrayList<>(mailItems);
+            for (MailItem Item : mailItems) {
+                Item.printDetails();
+                System.out.println("-------");
+            }
+        }
+        else {
+            System.out.println("Список пуст!");
         }
     }
 }
