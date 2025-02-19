@@ -17,8 +17,8 @@ public class RealEstateAgencyTest {
     @BeforeEach
     void setUp() {
         agency = new RealEstateAgency();
-        apartment = new Apartment("Kriegstrasse 21", 2, 64.2,  true);
-        house = new House("Kriegstrasse 202", 274.6, 1456,  true);
+        apartment = new Apartment("Kriegstrasse 21", 2, 64.2, true);
+        house = new House("Kriegstrasse 202", 274.6, 1456, true);
         property = new CommercialProperty("Kriegstrasse 65", 284.5, "Office");
     }
 

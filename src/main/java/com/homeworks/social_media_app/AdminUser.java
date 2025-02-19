@@ -3,7 +3,7 @@ package com.homeworks.social_media_app;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdminUser extends User{
+public class AdminUser extends User {
     private ArrayList<User> blockList = new ArrayList<>();
     private boolean isAdmin;
 
@@ -30,7 +30,7 @@ public class AdminUser extends User{
     public void showBlockList() {
         if (!blockList.isEmpty()) {
             System.out.println(blockList.size());
-            for (User user: blockList) {
+            for (User user : blockList) {
                 System.out.println(user.showInfo());
             }
         }

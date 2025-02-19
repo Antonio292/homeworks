@@ -9,9 +9,9 @@ public class HouseTest {
     private House house;
 
     @Test
-    void calculatePriceMustReturnCorrectHouseWithoutGaragePrice () {
+    void calculatePriceMustReturnCorrectHouseWithoutGaragePrice() {
 
-        house = new House("Kriegstrasse 201", 140.7, 604,  false);
+        house = new House("Kriegstrasse 201", 140.7, 604, false);
 
         double price = house.calculatePrice();
 
@@ -19,9 +19,9 @@ public class HouseTest {
     }
 
     @Test
-    void calculatePriceMustReturnCorrectHouseWithGaragePrice () {
+    void calculatePriceMustReturnCorrectHouseWithGaragePrice() {
 
-        house = new House("Kriegstrasse 201", 140.7, 604,  true);
+        house = new House("Kriegstrasse 201", 140.7, 604, true);
 
         double price = house.calculatePrice();
 

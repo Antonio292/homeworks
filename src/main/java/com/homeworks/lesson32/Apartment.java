@@ -1,6 +1,6 @@
 package com.homeworks.lesson32;
 
-public class Apartment implements Property{
+public class Apartment implements Property {
 
     private String address;
     private int floor;

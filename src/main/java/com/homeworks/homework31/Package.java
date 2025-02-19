@@ -4,10 +4,10 @@ package com.homeworks.homework31;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class Package extends MailItem{
+public class Package extends MailItem {
     private double length;
     private double width;
-    private  double height;
+    private double height;
 
     public Package(String sender, String recipient, double weight, double length, double width, double height) {
         super(sender, recipient, weight);
@@ -22,16 +22,13 @@ public class Package extends MailItem{
         if (weight <= 0) {
             log.warn("Attempt to calculate shipping cost for empty package ");
             return 0;
-        }
-        else if (0 < weight && weight < 1) {
+        } else if (0 < weight && weight < 1) {
             log.info("Attempt to calculate shipping cost for little package ");
             return 2;
-        }
-        else if ((weight - weightPackage) != 0) {
-            return (weightPackage*2) +2;
-        }
-        else {
-            return weightPackage*2;
+        } else if ((weight - weightPackage) != 0) {
+            return (weightPackage * 2) + 2;
+        } else {
+            return weightPackage * 2;
         }
     }
 
@@ -39,9 +36,9 @@ public class Package extends MailItem{
     public void printDetails() {
         System.out.println("Посылка: " + "\n" +
                 "Отправитель: " + sender + "\n" +
-                "Получатель: "  + recipient + "\n" +
+                "Получатель: " + recipient + "\n" +
                 "Вес посылки: " + weight + "kg\n" +
-                "Размеры: " + length + "x" + width + "x" + height +"cm" + "\n" +
+                "Размеры: " + length + "x" + width + "x" + height + "cm" + "\n" +
                 "Стоимость доставки: " + calculateShippingCost() + " евро");
     }
 }

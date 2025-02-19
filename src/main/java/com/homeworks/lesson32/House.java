@@ -1,6 +1,6 @@
 package com.homeworks.lesson32;
 
-public class House implements Property{
+public class House implements Property {
 
     private String address;
     private double area;
@@ -21,8 +21,7 @@ public class House implements Property{
         double priceLand = landArea * 200;
         if (hasGarage) {
             totalPrice = priceHouse + priceLand + 5000;
-        }
-        else {
+        } else {
             totalPrice = priceHouse + priceLand;
         }
         return totalPrice;

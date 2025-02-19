@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Slf4j
 public class PostOffice {
     private List<MailItem> mailItems = new ArrayList<>();
@@ -12,12 +13,11 @@ public class PostOffice {
         return new ArrayList<>(mailItems);
     }
 
-    public void addMailItem(MailItem Item){
+    public void addMailItem(MailItem Item) {
         if (Item != null) {
             mailItems.add(Item);
             log.info("added new Mail item");
-        }
-        else {
+        } else {
             System.out.println("Попытка добавить несуществующий элемент");
             log.warn("attempt to added null");
         }
@@ -26,7 +26,7 @@ public class PostOffice {
     public double calculateTotalShippingCost() {
         double totalCost = 0;
         if (!mailItems.isEmpty()) {
-            for (MailItem Item: mailItems) {
+            for (MailItem Item : mailItems) {
                 totalCost += Item.calculateShippingCost();
             }
             System.out.println("Общая стоимость: " + totalCost);
@@ -42,8 +42,7 @@ public class PostOffice {
                 Item.printDetails();
                 System.out.println("-------");
             }
-        }
-        else {
+        } else {
             System.out.println("Список пуст!");
         }
     }

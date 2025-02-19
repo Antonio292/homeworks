@@ -15,7 +15,7 @@ public abstract class MailItem {
 
     public void printDetails() {
         System.out.println("Отправитель: " + sender + "\n" +
-                           "Получатель: "  + recipient + "\n" +
-                           "Вес посылки: " + weight + "kg");
+                "Получатель: " + recipient + "\n" +
+                "Вес посылки: " + weight + "kg");
     }
 }

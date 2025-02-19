@@ -23,9 +23,9 @@ public class PostOfficeTest {
         notRegisteredLetter = new Letter("Anton", "Igor", 0.1, false);
         pack = new Package("Anton", "Igor", 3.6, 30, 30, 15);
         advertisement = new Advertisement("Anton", "Igor", 0.1, 125);
-}
+    }
 
-@Test
+    @Test
     void addMailItemMustReturnCorrectListLength() {
         office.addMailItem(registeredLetter);
         office.addMailItem(notRegisteredLetter);
@@ -33,10 +33,10 @@ public class PostOfficeTest {
         office.addMailItem(advertisement);
         office.addMailItem(null);
 
-    List<MailItem> mailItemsResult = office.getMailItems();
+        List<MailItem> mailItemsResult = office.getMailItems();
 
         assertEquals(4, mailItemsResult.size());
-}
+    }
 
     @Test
     void addMailItemMustReturnCorrectListValue() {

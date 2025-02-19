@@ -17,8 +17,8 @@ public class User {
 
     public String showInfo() {
         String info = "Id пользователя: " + id + ",\n" +
-                           "Имя пользователя: " + name + ",\n" +
-                           "Электронная почта пользователя: " + email;
+                "Имя пользователя: " + name + ",\n" +
+                "Электронная почта пользователя: " + email;
         System.out.println(info);
         return info;
     }
@@ -46,15 +46,15 @@ public class User {
     }
 
     public void viewFriendsPosts() {
-        for (User user: friendList) {
-            for (Post post: postsList) {
+        for (User user : friendList) {
+            for (Post post : postsList) {
                 System.out.println(post.getContent());
             }
         }
     }
 
     public void showFriendList() {
-        for (User user: friendList) {
+        for (User user : friendList) {
             user.showInfo();
         }
     }

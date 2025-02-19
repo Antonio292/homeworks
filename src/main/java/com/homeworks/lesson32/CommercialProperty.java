@@ -1,6 +1,6 @@
 package com.homeworks.lesson32;
 
-public class CommercialProperty implements Property{
+public class CommercialProperty implements Property {
 
     private String address;
     private double area;

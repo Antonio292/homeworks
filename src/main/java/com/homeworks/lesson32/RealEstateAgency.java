@@ -11,18 +11,17 @@ public class RealEstateAgency {
         return new ArrayList<>(properties);
     }
 
-    public void addProperty(Property property){
+    public void addProperty(Property property) {
         if (property != null) {
             properties.add(property);
-        }
-        else {
+        } else {
             System.out.println("attempt to added null");
         }
     }
 
     public double calculateTotalPrice() {
         double totalPrice = 0;
-        for (Property property: properties) {
+        for (Property property : properties) {
             totalPrice += property.calculatePrice();
         }
         System.out.println("Total price: " + totalPrice);
@@ -31,7 +30,7 @@ public class RealEstateAgency {
     }
 
     public void printAllDetails() {
-        for (Property property: properties){
+        for (Property property : properties) {
             property.printDetails();
         }
     }

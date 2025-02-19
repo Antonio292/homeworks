@@ -1,7 +1,7 @@
 package com.homeworks.social_media_app;
 
-public class PremiumUser extends User{
-    private int  subscriptionEndDate;
+public class PremiumUser extends User {
+    private int subscriptionEndDate;
 
 
     public PremiumUser(String id, String name, String email, int subscriptionEndDate) {
